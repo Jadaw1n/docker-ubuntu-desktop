@@ -23,5 +23,7 @@ ENV HOME /root
 
 WORKDIR /root
 
-CMD ["bash -c 'vncserver :1 -geometry 1280x800 -depth 24 && tail -F /root/.vnc/*.log'"]
+EXPOSE 5901
+
+CMD bash -c 'vncserver :1 -geometry 1280x800 -depth 24 && tail -F /root/.vnc/*.log'
 
